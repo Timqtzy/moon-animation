@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,900;1,200;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #eee;
+}
+
+.container{
+    width: 350px;
+    padding: 25px;
+    margin: 13rem auto;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.1)
+}
+.moon-con{
+    width: 150px;
+    height: 150px;
+    margin: 10px auto;
+}
+.moon-con .moon .mask,
+.moon-con .moon .fill{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border-radius: 50%;
+}
+.moon-con .moon .mask{
+    clip: rect(0px, 150px, 150px, 75px);
+}
+.moon-con .star{
+    width: 122px;
+    height: 122px;
+    font-size: 2rem;
+    position: absolute;
+    color: rgb(52, 45, 95);
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mask .fill{
+    clip: rect(0px, 75px, 150px, 0px);
+    background: #515683;
+}
+.mask.full,
+.moon .fill{
+    animation: fill ease-in-out 3s;
+    transform: rotate(135deg);
+}
+@keyframes fill {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(135deg);
+    }
+}
